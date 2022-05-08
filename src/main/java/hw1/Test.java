@@ -8,8 +8,12 @@ interface Stopable {
     void stop();
 }
 
+class Engine {
+
+}
+
 abstract class Car {
-    public Engine engine;
+    private Engine engine;
     private String color;
     private String name;
     protected void start() {
@@ -49,10 +53,15 @@ class LightWeightCar extends Car implements Moveable {
     }
 }
 
-class Lorry extends Car, Moveable, Stopable {
+class Lorry implements Moveable, Stopable {
+    private Car car;
+
+    @Override
     public void move(){
         System.out.println("Car is moving");
     }
+
+    @Override
     public void stop(){
         System.out.println("Car is stop");
     }
