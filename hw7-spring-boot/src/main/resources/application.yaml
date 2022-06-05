@@ -1,0 +1,17 @@
+server:
+  port: 8189
+  servlet:
+    context-path: /app
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+      ddl-auto: none
+      temp:
+        use_jdbc_metadata_defaults: false
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:products.db
+    username:
+    password:

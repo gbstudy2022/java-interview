@@ -1,0 +1,37 @@
+<div ng-controller="studentController" style="margin-bottom:5%">
+    <div style="display: inline-block; width:80%">
+        <h3>Студенты</h3>
+        <table class="table table-hover" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>ID</td>
+                <td>Имя</td>
+                <td>Возраст</td>
+                <td>&nbsp</td>
+                <td>&nbsp</td>
+            </tr>
+            <tbody>
+            <tr ng-repeat="st in StudentList">
+                <td>{{st.id}}</td>
+                <td>{{st.name}}</td>
+                <td>{{st.age}}</td>
+                <td>
+                    <button class="btn btn-primary" ng-click="delete(st.id)">Удалить</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" ng-click="update(st.id)">Изменить</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <div>
+
+    <div>
+        <h3>Добавить студента</h3>
+        <form novalidate ng-submit="addStudent()">
+            <input class="form-control" type="text" placeholder="Имя" ng-model="newStudent.name"><br>
+            <input class="form-control" type="number" placeholder="Возраст" ng-model="newStudent.age"><br>
+            <button type="submit" class="btn btn-primary">Добавить</button><br><br>
+        </form>
+    </div>
+
+</div>

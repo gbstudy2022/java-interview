@@ -1,0 +1,16 @@
+<div class="container" style="margin-top:5%">
+    <div ng-controller="updateController" style="margin-bottom:5%">
+
+        <div>
+            <h3>Изменить студента</h3>
+            <form novalidate ng-submit="updateStudent()">
+                <input class="form-control" type="text" placeholder="Имя" ng-model="student.name"><br>
+                <input class="form-control" type="number" placeholder="Возраст" ng-model="student.age"><br>
+                <button type="submit" class="btn btn-primary">Сохранить</button><br><br>
+            </form>
+        </div>
+
+        <button class="btn btn-primary" ng-click="back()">Назад</button><br><br>
+
+
+    </div>
